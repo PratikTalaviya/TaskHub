@@ -16,7 +16,7 @@ app.use(express.json());
 // CORS middleware configuration to allow requests from the frontend origin
 app.use(
   cors({
-    origin: "http://localhost:3000", // Replace with your frontend URL
+    origin: "https://taskhub-silk.vercel.app", // Replace with your frontend URL
     optionsSuccessStatus: 200, // Some legacy browsers (IE11, various SmartTVs) choke on 204
   })
 );
@@ -36,8 +36,6 @@ app.use(passport.session());
 
 // Routes
 app.use("/api/auth", authRoutes);
-console.log("HI!!!");
-console.log(process.env.URI);
 
 // Connect to MongoDB
 mongoose
