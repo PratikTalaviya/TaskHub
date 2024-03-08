@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const mongoose = require("mongoose");
 const cors = require("cors"); // Import the cors middleware
 const authRoutes = require("./routes/auth");
@@ -35,6 +36,8 @@ app.use(passport.session());
 
 // Routes
 app.use("/api/auth", authRoutes);
+console.log("HI!!!");
+console.log(process.env.URI);
 
 // Connect to MongoDB
 mongoose

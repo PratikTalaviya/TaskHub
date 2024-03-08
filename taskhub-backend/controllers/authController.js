@@ -37,6 +37,8 @@ exports.login = async (req, res) => {
 
     const user = await User.findOne({ email });
     if (!user) {
+      console.log("HI!!!");
+      console.log(process.env.URI);
       return res.status(404).json({ error: "User not found" });
     }
 
