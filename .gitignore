@@ -1,0 +1,42 @@
+# Ignore node_modules directory for Node.js dependencies
+node_modules/
+
+# Ignore any compiled or built files
+/build/
+/dist/
+/out/
+/.next/
+/.nuxt/
+/.webpack/
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.*.local
+
+# Ignore any log files
+*.log
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Visual Studio Code workspace settings
+.vscode/
+
+# Ignore IDE-specific files
+.idea/
+*.iml
+
+# Ignore any temporary files
+*.tmp
+
+# Ignore any package-lock.json files (useful for npm)
+package-lock.json
+
+# Ignore yarn lockfile
+yarn.lock
+
+# Ignore firebase related files
+firebase.json
+.firebaserc
+firebase-debug.log
