@@ -10,7 +10,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://task-hub-psi.vercel.app/api/auth/register", {
+      const response = await axios.post("http://localhost:5000/api/auth/register", {
         username,
         email,
         password,
