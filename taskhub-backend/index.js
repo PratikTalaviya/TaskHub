@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const cors = require("cors"); // Import the cors middleware
 const authRoutes = require("./routes/auth");
 const config = require("./config/config");
-const session = require("express-session");
-const passport = require("passport");
+// const session = require("express-session");
+// const passport = require("passport");
 // const passport = require("./middleware/passport-setup");
 
 const app = express();
@@ -21,18 +21,18 @@ app.use(
   })
 );
 
-// Session middleware
-app.use(
-  session({
-    secret: "your_secret_key",
-    resave: false,
-    saveUninitialized: false,
-  })
-);
+// // Session middleware
+// app.use(
+//   session({
+//     secret: "your_secret_key",
+//     resave: false,
+//     saveUninitialized: false,
+//   })
+// );
 
-// Initialize Passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
+// // Initialize Passport middleware
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // Routes
 app.use("/api/auth", authRoutes);

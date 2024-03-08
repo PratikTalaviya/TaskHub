@@ -3,13 +3,13 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 const passport = require("passport");
 
-exports.googleAuth = passport.authenticate("google", { scope: ["profile", "email"] });
+// exports.googleAuth = passport.authenticate("google", { scope: ["profile", "email"] });
 
-exports.googleAuthCallback = passport.authenticate("google", { failureRedirect: "/login" });
+// exports.googleAuthCallback = passport.authenticate("google", { failureRedirect: "/login" });
 
-exports.googleAuthCallbackHandler = (req, res) => {
-  res.redirect("/dashboard"); // Redirect to dashboard after successful login
-};
+// exports.googleAuthCallbackHandler = (req, res) => {
+//   res.redirect("/dashboard"); // Redirect to dashboard after successful login
+// };
 
 exports.register = async (req, res) => {
   try {
