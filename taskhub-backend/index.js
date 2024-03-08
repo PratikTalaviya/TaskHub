@@ -17,7 +17,7 @@ app.use(express.json());
 // CORS middleware configuration to allow requests from the frontend origin
 app.use(
   cors({
-    origin: "https://taskhub-silk.vercel.app", // Replace with your frontend URL
+    origin: "http://localhost:3000", // Replace with your frontend URL
     optionsSuccessStatus: 200, // Some legacy browsers (IE11, various SmartTVs) choke on 204
   })
 );
