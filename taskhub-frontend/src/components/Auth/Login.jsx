@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { Router } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -14,6 +15,7 @@ function Login() {
       toast.success("Login Successful!!");
       setEmail("");
       setPassword("");
+      // Router.push("/dashboard");
     } catch (error) {
       console.error("Login failed:", error.response.data);
       toast.error(`Login Failed!! ${error.response.data.error}`);
@@ -44,7 +46,7 @@ function Login() {
         required
       />
       <button>Log in</button>
-      <button>Log in with Google</button>
+      {/* <button>Log in with Google</button> */}
     </form>
   );
 }
